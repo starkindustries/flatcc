@@ -1,13 +1,32 @@
+# FlatCC 
+
+**FlatBuffers in C for C**
+
 Ubuntu, macOS and Windows: [![Build Status](https://github.com/dvidelabs/flatcc/actions/workflows/ci.yml/badge.svg)](https://github.com/dvidelabs/flatcc/actions/workflows/ci.yml)
+
 Windows: [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/dvidelabs/flatcc?branch=master&svg=true)](https://ci.appveyor.com/project/dvidelabs/flatcc)
+
 Weekly: [![Build Status](https://github.com/dvidelabs/flatcc/actions/workflows/weekly.yml/badge.svg)](https://github.com/dvidelabs/flatcc/actions/workflows/weekly.yml)
 
+## Quick Start Guide - Ubuntu (TLDR section)
 
-_The JSON parser may change the interface for parsing union vectors in a
+Clone the repo. 
+
+Build and run:
+```
+scripts/initbuild.sh make
+scripts/set.sh -a ../mymonster
+cd ../mymonster
+scripts/build.sh
+cd build
+./mymonster
+```
+
+## The Full Instruction Manual
+
+_Note: The JSON parser may change the interface for parsing union vectors in a
 future release which requires code generation to match library
 versions._
-
-# FlatCC FlatBuffers in C for C
 
 `flatcc` has no external dependencies except for build and compiler
 tools, and the C runtime library. With concurrent Ninja builds, a small client
@@ -16,7 +35,6 @@ and execute a test case in a few seconds, produce binaries between 15K and 60K,
 read small buffers in 30ns, build FlatBuffers in about 600ns, and with a larger
 executable also handle optional json parsing or printing in less than 2 us for a
 10 field mixed type message.
-
 
 <!-- vim-markdown-toc GFM -->
 
